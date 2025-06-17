@@ -1,0 +1,184 @@
+[
+  {
+    "room_number": "101",
+    "image_url": "https://i.ibb.co/FkZ8dHHt/1.jpg",
+    "reviews": [],
+    "rent": 120,
+    "description": "Deluxe king room with city view.",
+    "facilities": ["WiFi", "Air Conditioning", "TV", "Mini Bar", "Room Service"],
+    "availability": true
+  },
+  {
+    "room_number": "102",
+    "image_url": "https://i.ibb.co/MyxJgMnL/2.jpg",
+    "reviews": [],
+    "rent": 150,
+    "description": "Premium suite with sea view and balcony.",
+    "facilities": ["WiFi", "Jacuzzi", "Mini Bar", "Balcony", "Smart TV"],
+    "availability": false
+  },
+  {
+    "room_number": "103",
+    "image_url": "https://i.ibb.co/4nV7wZmh/3.jpg",
+    "reviews": [],
+    "rent": 85,
+    "description": "Standard single room, ideal for solo travelers.",
+    "facilities": ["WiFi", "TV", "Room Service"],
+    "availability": true
+  },
+  {
+    "room_number": "104",
+    "image_url": "https://i.ibb.co/d4GYDzbS/4.jpg",
+    "reviews": [],
+    "rent": 100,
+    "description": "Double room with modern interiors.",
+    "facilities": ["WiFi", "Air Conditioning", "TV"],
+    "availability": true
+  },
+  {
+    "room_number": "105",
+    "image_url": "https://i.ibb.co/7t28CXq1/5.jpg",
+    "reviews": [],
+    "rent": 180,
+    "description": "Family suite with extra beds and kitchenette.",
+    "facilities": ["WiFi", "Kitchenette", "TV", "Air Conditioning"],
+    "availability": false
+  },
+  {
+    "room_number": "106",
+    "image_url": "https://i.ibb.co/PvWzkDjq/6.webp",
+    "reviews": [],
+    "rent": 95,
+    "description": "Double room with a nice view.",
+    "facilities": ["WiFi", "TV", "Mini Bar"],
+    "availability": true
+  },
+  {
+    "room_number": "107",
+    "image_url": "https://i.ibb.co/zTgT7pCn/7.jpg",
+    "reviews": [],
+    "rent": 140,
+    "description": "Deluxe room with elegant decor.",
+    "facilities": ["WiFi", "Air Conditioning", "Bathtub", "Smart TV"],
+    "availability": false
+  },
+  {
+    "room_number": "108",
+    "image_url": "https://i.ibb.co/rGzX68TM/8.jpg",
+    "reviews": [],
+    "rent": 105,
+    "description": "Comfortable twin-bed room.",
+    "facilities": ["WiFi", "TV", "Room Service"],
+    "availability": true
+  },
+  {
+    "room_number": "109",
+    "image_url": "https://i.postimg.cc/Wp9CXpGk/9.jpg",
+    "reviews": [],
+    "rent": 125,
+    "description": "Modern room with stylish furnishings.",
+    "facilities": ["WiFi", "Air Conditioning", "TV"],
+    "availability": true
+  },
+  {
+    "room_number": "110",
+    "image_url": "https://i.postimg.cc/gc4zzCfK/00.jpg",
+    "reviews": [],
+    "rent": 200,
+    "description": "Luxury suite with rooftop access.",
+    "facilities": ["WiFi", "Jacuzzi", "Balcony", "Smart TV", "Mini Bar"],
+    "availability": false
+  },
+  {
+    "room_number": "111",
+    "image_url": "https://i.postimg.cc/kX0jp2BB/10.webp",
+    "reviews": [],
+    "rent": 75,
+    "description": "Economy room for budget travelers.",
+    "facilities": ["WiFi", "TV"],
+    "availability": true
+  },
+  {
+    "room_number": "112",
+    "image_url": "https://i.postimg.cc/9Qyx5c71/12.jpg",
+    "reviews": [],
+    "rent": 110,
+    "description": "Double deluxe room with garden view.",
+    "facilities": ["WiFi", "TV", "Balcony", "Air Conditioning"],
+    "availability": true
+  },
+  {
+    "room_number": "201",
+    "image_url": "https://i.postimg.cc/SRwjxPnM/21.webp",
+    "reviews": [],
+    "rent": 135,
+    "description": "Superior room with city skyline view.",
+    "facilities": ["WiFi", "Air Conditioning", "Mini Bar", "Smart TV", "Room Service"],
+    "availability": true
+  },
+ 
+  {
+    "room_number": "203",
+    "image_url": "https://i.postimg.cc/65fyXM9y/23.jpg",
+    "reviews": [],
+    "rent": 120,
+    "description": "Compact room for solo travelers.",
+    "facilities": ["WiFi", "TV", "Mini Bar"],
+    "availability": true
+  },
+  {
+    "room_number": "204",
+    "image_url": "https://i.postimg.cc/x1VwbxGx/24.jpg",
+    "reviews": [],
+    "rent": 180,
+    "description": "Luxury suite with city view and king bed.",
+    "facilities": ["WiFi", "Jacuzzi", "Mini Bar", "Balcony", "Smart TV"],
+    "availability": false
+  },
+  {
+    "room_number": "205",
+    "image_url": "https://i.postimg.cc/sg9gBZWW/25.webp",
+    "reviews": [],
+    "rent": 110,
+    "description": "Standard double room with essential amenities.",
+    "facilities": ["WiFi", "TV", "Mini Bar", "Room Service"],
+    "availability": true
+  },
+  {
+    "room_number": "206",
+    "image_url": "https://i.postimg.cc/2jGpBF9r/26.jpg",
+    "reviews": [],
+    "rent": 105,
+    "description": "Economy room with garden view.",
+    "facilities": ["WiFi", "TV", "Room Service"],
+    "availability": true
+  },
+  {
+    "room_number": "207",
+    "image_url": "https://i.postimg.cc/gkj7L96H/27.jpg",
+    "reviews": [],
+    "rent": 130,
+    "description": "Quiet room with king bed and garden view.",
+    "facilities": ["WiFi", "Air Conditioning", "TV", "Mini Bar"],
+    "availability": true
+  },
+  {
+    "room_number": "208",
+    "image_url": "https://i.postimg.cc/1tMW4Mmd/28.jpg",
+    "reviews": [],
+    "rent": 170,
+    "description": "Executive suite with large windows and panoramic view.",
+    "facilities": ["WiFi", "Jacuzzi", "Mini Bar", "Smart TV", "Balcony"],
+    "availability": true
+  },
+  {
+    "room_number": "209",
+    "image_url": "https://i.postimg.cc/1zmYG4W2/29.webp",
+    "reviews": [],
+    "rent": 145,
+    "description": "Business suite with dedicated work area.",
+    "facilities": ["WiFi", "Air Conditioning", "TV", "Mini Bar", "Work Desk"],
+    "availability": false
+  }
+]
+

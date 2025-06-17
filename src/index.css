@@ -1,0 +1,29 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+body{
+  background-color: white;
+  color:black;
+  transition:background-color 0.3s, color 0.3s;
+  padding: 14px;
+}
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.highlighted a.active{
+    
+    border:4px solid #00aa00;
+  
+    
+}
+.tstyle th,td{
+    padding:24px;
+    font-size: larger;
+    text-align: center;
+}
+.sty th,td{
+    text-align: center;
+}
+
