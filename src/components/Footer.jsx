@@ -7,7 +7,7 @@ const Footer = () => {
   <nav>
     <h6 className="footer-title">Services</h6>
     <a className="link link-hover">Branding</a>
-    <a className="link link-hover">Design</a>
+    <a className="link link-hover">Event Management</a>
     <a className="link link-hover">Marketing</a>
     <a className="link link-hover">Advertisement</a>
   </nav>
@@ -27,11 +27,11 @@ const Footer = () => {
 </footer>
 <footer className="footer bg-sky-500 text-base-content border-base-300 px-3 lg:px-10 py-4">
   <aside className="grid-flow-col items-center">
-    <img className='w-12' src={logo} alt="" />
+    <img className='w-12 rounded-xl' src='https://i.postimg.cc/9FC4LYZw/h.avif' alt="" />
     <p>
-      JetWork Industries Ltd.
+      Hotel Jeal
       <br />
-      Providing reliable tech since 1992
+      Serving since 1991
     </p>
   </aside>
   <nav className="place-self-center lg:justify-self-end">

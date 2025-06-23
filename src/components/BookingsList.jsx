@@ -6,6 +6,7 @@ import 'react-day-picker/style.css';
 import { IoIosStar } from 'react-icons/io';
 import { AuthContext } from './AuthProvider';
 import dateTime from 'date-time';
+import { Helmet } from 'react-helmet';
 const BookingsList=({myBookingsPromise})=>{
  
   const {user}=use(AuthContext);
@@ -15,6 +16,7 @@ const BookingsList=({myBookingsPromise})=>{
 const bookList=use(myBookingsPromise)
  const[cart,setCart]=useState(bookList);
  console.log(bookList)
+//  if(bookList.message)
  console.log(cart)
 // const today= new Date();
 //   const yyyy=today.getFullYear();
@@ -22,16 +24,18 @@ const bookList=use(myBookingsPromise)
 //   const dd=String(today.getDate()).padStart(2,'0');
 //   const formattedDate=`${yyyy}-${mm}-${dd}`;
 
+  const [revw,setrevw]=useState([])
   const [selected, setSelected] = useState(null);
   const [book,setBook]=useState('');
   const[rooms,setRooms]=useState('');
-  const[num,setNum]=useState('');
+  const[room,Setroom]=useState('');
   
   const [ratings,setRating]=useState(1);
 const[rateColor,setColor]=useState(null);
 
 const [reviews, setReviews] = useState([]);
   
+
 
    useEffect(()=>{
          fetch('https://hotel-booking-server-three-lake.vercel.app/history').then(res=>res.json()).then(data=>{
@@ -76,6 +80,10 @@ console.log(room)
 
 console.log(book);
  document.getElementById('my_modal_4').showModal()
+}
+
+const handleUpclose=()=>{
+  document.getElementById('my_modal_4').close()
 }
 
 const handleConfirm=()=>{
@@ -205,46 +213,61 @@ return;
 
 const handleModal=(room)=>{
 console.log(room)
-setNum(room?.roomNo);
+Setroom(room);
 
   document.getElementById('rev').showModal()
 
 }
 
+
+const handleClose=()=>{
+   document.getElementById('rev').close()
+   return;
+}
 const handleRev=(e)=>{
 e.preventDefault();
   const comment=e.target.comment.value;
   const name=e.target.name.value;
-  const date=e.target.date.value;
-  console.log(num)
-   const rev = {name, comment, ratings,date};
-   console.log(rev);
-    const updatedReviews = [...reviews, rev];
+  const somoy=e.target.somoy.value;
+const time=new Date(somoy);
+const timestamp = time.getTime();
+console.log(timestamp)
+
+  const house=room.roomNo;
+  const houseImg=room.image;
+
+  const email= user?.email;
+  const photo=user?.photoURL;
+   const rev = {house,houseImg,email,name,photo, comment, ratings,timestamp};
+
+  console.log(rev);
+    const updatedReviews = [rev];
   setReviews(updatedReviews);
-  revFetch(num,updatedReviews);
-  document.getElementById('rev').close();
+  revFetch(email,house,updatedReviews);
+  postRev(rev);
+document.getElementById('rev').close();
 }
 
 
-const revFetch=(num,reviews)=>{
-  console.log({num,reviews})
+const revFetch=(email,num,reviews)=>{
+  console.log({email,num,reviews})
   fetch('https://hotel-booking-server-three-lake.vercel.app/review',{
 
   method:'PATCH',
   headers:{
     'content-type':'application/json'
   },
-  body:JSON.stringify({num,reviews})
+  body:JSON.stringify({email,num,reviews})
 }).then(res=>res.json()).then(data=>{
   console.log('after patch',data);
-  if(data.final.modifiedCount){
-    Swal.fire({
-      title: "review successfull!",
-      text: `Room no:${num} `,
-      icon: "success"
-    });
+  // if(data.final.modifiedCount){
+  //   Swal.fire({
+  //     title: "review successfull!",
+  //     text: `Room no:${num} `,
+  //     icon: "success"
+  //   });
  
-  }
+  // }
   
  
 })
@@ -252,16 +275,52 @@ const revFetch=(num,reviews)=>{
 }
 
 
+const postRev=(reviews)=>{
+ fetch("https://hotel-booking-server-three-lake.vercel.app/rooms/reviews", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(reviews),
+  // …
+}).then(res=>res.json())
+.then(data=>{
+  console.log('after post review in DB',data);
+  if(data.result.insertedId){
+ 
+// toast.success(`You successfully booked room number :  ${room.room_number} on ${day}`);
+
+ Swal.fire({
+      title: "you successfully posted a review!",
+      text: `For room no:${room.roomNo}.`,
+      icon: "success"
+    });
+
+
+setrevw(data.review)
+  }
+ 
+} );
+     
+
+ 
+}
+ 
+
+console.log(revw)
+
+
+
 
     return(
-         <div className='mt-12 flex justify-center items-center border-1 border-purple-500 lg:p-24'>
-               {/* {bookList.length} */}
+         <div className='mt-12 flex justify-center items-center border-2 border-red-800 rounded-2xl lg:p-16'>
+          
 
-               {bookList.length?(<div>
+               {bookList.length?(<div className=' w-full'>
 
-                 <table className="table table-xs w-full mx-auto ">
+                 <table className="table table-xs  w-full mx-auto ">
     <thead>
-      <tr className='sty text-green-600 '>
+      <tr className='sty text-sky-500 '>
         <th></th>
         <th>Room No.</th>
         
@@ -275,17 +334,20 @@ const revFetch=(num,reviews)=>{
      <tbody>
 {
    cart?.map((room,index)=><tr className='tsyle' key={room._id}>
+    <Helmet>
+      <title>Hotel Jeaj | Update booking date</title>
+    </Helmet>
          <th>{index+1}</th>
     <td>{room.roomNo}</td>
-     <td><img className='w-34 text-center mx-auto rounded-xl' src={room.image} alt="" />  <button onClick={()=>handleModal(room)} className='btn bg-purple-300 m-2'>Review</button></td>
+     <td><img className='w-34 text-center mx-auto rounded-xl' src={room.image} alt="" />  <button onClick={()=>handleModal(room)} className='btn bg-sky-400 m-2'>Review</button></td>
         <td><p>{room.date}</p>
-         <button className="btn m-2 bg-purple-300 border-none" onClick={()=>handleUpdate(room)}>Update date</button>
+         <button className="btn m-2 bg-sky-400 border-none" onClick={()=>handleUpdate(room)}>Update date</button>
         </td>
       
-        <td>{room.rent}</td>
+        <td>$ {room.rent} USD</td>
         
         {/* <td><Link to={`/update/${room._id}`}><button onClick={()=>handleUpdate(room._id)} className='btn bg-lime-500'>Cancel</button></Link></td> */}
-        <td><button onClick={()=>handleDelete(room)} className='btn bg-lime-500'>Cancel</button></td>
+        <td><button onClick={()=>handleDelete(room)} className='btn bg-sky-400'>Cancel</button></td>
         {/* <td><Link to={`/addtask/${room._id}`}><button className='btn bg-lime-500'>review</button></Link></td> */}
     </tr>)
 }
@@ -298,7 +360,9 @@ const revFetch=(num,reviews)=>{
 {/* You can open the modal using document.getElementById('ID').showModal() method */}
 
 <dialog id="my_modal_4" className="modal">
-  <div className="modal-box w-11/12 max-w-5xl">
+ 
+  <div className="modal-box w-11/12 max-w-5xl bg-sky-200">
+   <div className='text-right'> <button onClick={handleUpclose} className='btn bg-red-500 '>Close</button></div>
     <h3 className="font-bold text-3xl my-3  text-center">Update your booking date !</h3>
 
  <div className='flex justify-center'>
@@ -316,9 +380,10 @@ const revFetch=(num,reviews)=>{
     <div className="modal-action">
       <form method="dialog">
         {/* if there is a button, it will close the modal */}
-        <button onClick={handleConfirm} className="btn">Confirm</button>
+        <button onClick={handleConfirm} className="btn bg-lime-500 border-none">Confirm</button>
       </form>
     </div>
+   
   </div>
 </dialog>
 
@@ -326,12 +391,17 @@ const revFetch=(num,reviews)=>{
 {/* You can open the modal using document.getElementById('ID').showModal() method */}
 
 <dialog id="rev" className="modal ">
-  <div className="modal-box w-11/12 max-w-5xl rounded-3xl">
+   <Helmet>
+      <title>Hotel Jeaj | Review</title>
+    </Helmet>
+  <div className="modal-box w-11/12 max-w-5xl rounded-3xl bg-sky-300">
+  <p className='text-center text-5xl text-red-800 font-bold'>Hotel Jeal</p>
+  <p className='text-center text-3xl'>Room no: <span className='font-bold'>{room.roomNo}</span></p>
     <div className="modal-action ">
 
  <form onSubmit={handleRev}  className='flex flex-col gap-3 justify-center w-5/6 mx-auto items-center'>
   <label className='mt-3'>User Name :
-    <input className="input w-2/3 mb-3 text-xl ml-3 text-black" type="text" id="username" name="name" value={ user && user.displayName} readOnly/>
+    <input className="input w-2/3 mb-3 text-xl ml-3 text-black rounded-2xl" type="text" id="username" name="name" value={ user && user.displayName} readOnly/>
     </label> 
           <label className='text-2xl font-bold mt-4'>Please, write a review:</label>
           
@@ -352,17 +422,14 @@ const revFetch=(num,reviews)=>{
                     })}
                 </div>
                 <div className='flex flex-col items-center justify-center text-center '>
-             <input className='mx-auto my-3 text-center' name="date" type="text" value={dateTime()} readOnly/>
-            <button type="submit" className='btn bg-green-400 rounded-lg text-white'>Submit Review</button>
+             <input className='mx-auto my-3 text-center' name="somoy" type="text" value={dateTime()} readOnly/>
+            <button type="submit" className='btn border-none bg-green-400 rounded-lg text-white'>Submit Review</button>
                 </div>
-              
+             
           </form>
+ <button onClick={handleClose} className="btn bg-red-500 border-none text-white">Close</button>
 
 
-      <form method="dialog">
-        {/* if there is a button, it will close the modal */}
-        <button className="btn">Close</button>
-      </form>
     </div>
   </div>
 </dialog>

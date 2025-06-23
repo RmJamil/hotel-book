@@ -6,5 +6,7 @@ export const myBookingsPromise=(email,accessToken)=>{
                 authorization:`Bearer ${accessToken}`
 
         }}
-    ).then(res=>res.json())
+    ).then(res=>res.json()
+
+)
 }

@@ -6,7 +6,7 @@ import Featured from './Featured';
 import { Typewriter } from 'react-simple-typewriter';
 const Trending = ({rooms}) => {
   
-rooms.sort((a, b) => a.rent - b.rent);
+rooms.sort((a, b) => ((b.reviews.length) - (a.reviews.length)));
 
 rooms=rooms.slice(0,6);
 
@@ -18,9 +18,9 @@ console.log(rooms)
        
    <div>
     <p className='text-center text-5xl my-10 '>
-      <span className='text-red-500 font-bold'>
+      <span className='text-sky-500 font-bold'>
         <Typewriter
-            words={['Featured Task']}
+            words={['Featured Rooms']}
             loop={20}
             cursor
             cursorStyle='_'

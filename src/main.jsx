@@ -6,15 +6,19 @@ import { Router, RouterProvider } from 'react-router'
 import router from './Routes.jsx'
 import AuthProvider from './components/AuthProvider.jsx'
 import { ToastContainer } from 'react-toastify'
+import { Helmet } from 'react-helmet'
+import { HelmetProvider } from 'react-helmet-async'
 
 
 createRoot(document.getElementById('root')).render(
-
+ <HelmetProvider>
 <AuthProvider>
-     <ToastContainer />
+
+   
 <RouterProvider router={router}/>
+
 </AuthProvider>
 
-
+</HelmetProvider>
 
 )

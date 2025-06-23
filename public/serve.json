@@ -1,0 +1,19 @@
+[
+  {
+    "service": "In‑Room Dining (Full‑Service)",
+    "image": "https://i.postimg.cc/cJQsZCN7/ss.jpg",
+    "description": "A premium dining experience with hot meals, appetizers, desserts and beverages delivered on tray or trolley—white‑glove presentation, available during scheduled hours or 24/7 in luxury hotels."
+  },
+ 
+  {
+    "service": "Laundry & Dry‑Cleaning",
+    "image": "https://i.postimg.cc/QttcwR23/laundry.jpg",
+    "description": "Staff‑handled laundry services including washing, dry‑cleaning, ironing, with express options and premium detergents."
+  },
+ 
+  {
+    "service": "Swimming Pool Access",
+    "image": "https://i.postimg.cc/TPWKbTvh/swim.jpg",
+    "description": "Hotels often offer outdoor, indoor, rooftop or infinity pools available to guests—including separate sections for families and adults, complimentary towel service, safety supervision, poolside snacks/drinks, cabanas, and sometimes day‑pass options." 
+  }
+]

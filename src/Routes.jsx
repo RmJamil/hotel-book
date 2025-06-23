@@ -20,7 +20,7 @@ import Rooms from "./components/Rooms"
 import RoomDetails from "./components/RoomDetails"
 import MyBookings from "./components/MyBookings"
 import RoomConfirm from "./components/RoomConfirm"
-
+import { createRoot } from 'react-dom/client';
 
 const router=createBrowserRouter([
     { 

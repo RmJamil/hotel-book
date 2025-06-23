@@ -2,11 +2,11 @@ import React, { use } from 'react';
 // import { useLoaderData } from 'react-router';
 import Single from './Single';
 
-const allApp=fetch("/allapps.json").then((res)=>res.json());
-const Slider = ({visit}) => {
-    const data= use(allApp);
+// const allApp=fetch("/allapps.json").then((res)=>res.json());
+const Slider = () => {
+    // const data= use(allApp);
     // const visitors=use(visit);
-    console.log(visit)
+
 
 
 
@@ -14,12 +14,11 @@ const Slider = ({visit}) => {
       
        
          
-        <div>
+        <div className=''>
         
-             <div className='flex flex-row '>
-          {
-            visit.map((one=>(<Single key={one.id} one={one}></Single>)))
-          }
+             <div className='flex flex-col  w-full'>
+          <Single></Single>
+       
         </div>
         </div>
    

@@ -7,9 +7,9 @@ const Reviews = ({ek}) => {
     const {comment,ratings}=ek;
     // console.log(ek)
     return (
-        <div className='border border-r-4 border-lime-400 my-8 p-6 rounded-2xl text-wrap overflow-hidden'>
+        <div className='border border-r-4 border-sky-400 my-8 p-6 rounded-2xl text-wrap overflow-hidden'>
           <div className='wrap-break-word overflow-hidden'>
-            <span className='text-2xl text-green-400 font-bold'>{ek.name}:</span> <span className='mr-6 text-3xl'>{comment}</span>
+            <span className='text-2xl text-sky-400 font-bold'>{ek.name}:</span> <span className='mr-6 text-3xl'>{comment}</span>
           </div>
 
              {

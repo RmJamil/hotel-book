@@ -1,6 +1,6 @@
 [
   {
-    "room_number": "101",
+    "room_number": 101,
     "image_url": "https://i.ibb.co/FkZ8dHHt/1.jpg",
     "reviews": [],
     "rent": 120,
@@ -9,7 +9,7 @@
     "availability": true
   },
   {
-    "room_number": "102",
+    "room_number": 102,
     "image_url": "https://i.ibb.co/MyxJgMnL/2.jpg",
     "reviews": [],
     "rent": 150,
@@ -18,7 +18,7 @@
     "availability": false
   },
   {
-    "room_number": "103",
+    "room_number": 103,
     "image_url": "https://i.ibb.co/4nV7wZmh/3.jpg",
     "reviews": [],
     "rent": 85,
@@ -27,7 +27,7 @@
     "availability": true
   },
   {
-    "room_number": "104",
+    "room_number": 104,
     "image_url": "https://i.ibb.co/d4GYDzbS/4.jpg",
     "reviews": [],
     "rent": 100,
@@ -36,7 +36,7 @@
     "availability": true
   },
   {
-    "room_number": "105",
+    "room_number": 105,
     "image_url": "https://i.ibb.co/7t28CXq1/5.jpg",
     "reviews": [],
     "rent": 180,
@@ -45,7 +45,7 @@
     "availability": false
   },
   {
-    "room_number": "106",
+    "room_number": 106,
     "image_url": "https://i.ibb.co/PvWzkDjq/6.webp",
     "reviews": [],
     "rent": 95,
@@ -54,7 +54,7 @@
     "availability": true
   },
   {
-    "room_number": "107",
+    "room_number": 107,
     "image_url": "https://i.ibb.co/zTgT7pCn/7.jpg",
     "reviews": [],
     "rent": 140,
@@ -63,7 +63,7 @@
     "availability": false
   },
   {
-    "room_number": "108",
+    "room_number": 108,
     "image_url": "https://i.ibb.co/rGzX68TM/8.jpg",
     "reviews": [],
     "rent": 105,
@@ -72,7 +72,7 @@
     "availability": true
   },
   {
-    "room_number": "109",
+    "room_number": 109,
     "image_url": "https://i.postimg.cc/Wp9CXpGk/9.jpg",
     "reviews": [],
     "rent": 125,
@@ -81,7 +81,7 @@
     "availability": true
   },
   {
-    "room_number": "110",
+    "room_number": 110,
     "image_url": "https://i.postimg.cc/gc4zzCfK/00.jpg",
     "reviews": [],
     "rent": 200,
@@ -90,7 +90,7 @@
     "availability": false
   },
   {
-    "room_number": "111",
+    "room_number": 111,
     "image_url": "https://i.postimg.cc/kX0jp2BB/10.webp",
     "reviews": [],
     "rent": 75,
@@ -99,7 +99,7 @@
     "availability": true
   },
   {
-    "room_number": "112",
+    "room_number": 112,
     "image_url": "https://i.postimg.cc/9Qyx5c71/12.jpg",
     "reviews": [],
     "rent": 110,
@@ -108,7 +108,7 @@
     "availability": true
   },
   {
-    "room_number": "201",
+    "room_number": 201,
     "image_url": "https://i.postimg.cc/SRwjxPnM/21.webp",
     "reviews": [],
     "rent": 135,
@@ -118,7 +118,7 @@
   },
  
   {
-    "room_number": "203",
+    "room_number": 203,
     "image_url": "https://i.postimg.cc/65fyXM9y/23.jpg",
     "reviews": [],
     "rent": 120,
@@ -127,7 +127,7 @@
     "availability": true
   },
   {
-    "room_number": "204",
+    "room_number": 204,
     "image_url": "https://i.postimg.cc/x1VwbxGx/24.jpg",
     "reviews": [],
     "rent": 180,
@@ -136,7 +136,7 @@
     "availability": false
   },
   {
-    "room_number": "205",
+    "room_number": 205,
     "image_url": "https://i.postimg.cc/sg9gBZWW/25.webp",
     "reviews": [],
     "rent": 110,
@@ -145,7 +145,7 @@
     "availability": true
   },
   {
-    "room_number": "206",
+    "room_number": 206,
     "image_url": "https://i.postimg.cc/2jGpBF9r/26.jpg",
     "reviews": [],
     "rent": 105,
@@ -154,7 +154,7 @@
     "availability": true
   },
   {
-    "room_number": "207",
+    "room_number": 207,
     "image_url": "https://i.postimg.cc/gkj7L96H/27.jpg",
     "reviews": [],
     "rent": 130,
@@ -163,7 +163,7 @@
     "availability": true
   },
   {
-    "room_number": "208",
+    "room_number": 208,
     "image_url": "https://i.postimg.cc/1tMW4Mmd/28.jpg",
     "reviews": [],
     "rent": 170,
@@ -172,7 +172,7 @@
     "availability": true
   },
   {
-    "room_number": "209",
+    "room_number": 209,
     "image_url": "https://i.postimg.cc/1zmYG4W2/29.webp",
     "reviews": [],
     "rent": 145,
