@@ -36,7 +36,7 @@ const Rooms = () => {
       console.log(sortOrder)
     
     return (
-      <div className='w-11/12 mx-auto mt-8'>
+      <div className='w-full mx-auto mt-8'>
 
         <Helmet>
           <title>Hotel Jeal | Rooms</title>

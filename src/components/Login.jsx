@@ -76,7 +76,7 @@ Swal.fire({
 }
 
     return (
-      <div className='lg:w-11/12 mx-auto my-8'>
+      <div className=' my-8'>
            <Helmet>
       <title>Hotel Jeal | Log in </title>
     </Helmet>

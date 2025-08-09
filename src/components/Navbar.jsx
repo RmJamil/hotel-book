@@ -40,7 +40,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-sky-300 lg:p-4 shadow-sm rounded-md lg:rounded-xl">
+    <div className="navbar bg-sky-300 lg:px-16 lg:py-4 w-full shadow-sm rounded-md lg:rounded-xl">
       <div className="flex-1 flex items-center justify-between w-full">
         {/* Logo and Mobile Toggle */}
         <div className="flex flex-col-reverse top-0 lg:flex-row items-center">

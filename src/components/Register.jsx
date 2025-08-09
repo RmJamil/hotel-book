@@ -108,7 +108,7 @@ console.log(user)
 
 
     return (
-       <div className='lg:w-11/12 mx-auto lg:my-8'>
+       <div className='lg:my-8'>
           <Helmet>
       <title>Hotel Jeal | Sign up </title>
     </Helmet>

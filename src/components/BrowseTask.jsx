@@ -15,7 +15,7 @@ console.log(jobs);
 
  
     return (
-        <div className='lg:w-11/12 mx-auto mt-8'>
+        <div className='mt-8'>
        
          <div className='sticky top-0  z-50'><Navbar></Navbar></div>
    <p className='text-center lg:text-5xl font-bold text-blue-500 lg:mt-24 border-b-2 pb-2 my-4'>All jobs are shown as per shorter deadline</p>

@@ -16,7 +16,7 @@ const MyBookings=()=>{
 
 
     return(
-        <div  className='w-11/12 mx-auto mt-8'>
+        <div  className=' mt-8'>
           <Helmet>
             <title>Hotel Jeal | My Bookings</title>
           </Helmet>

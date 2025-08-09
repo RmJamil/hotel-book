@@ -82,7 +82,7 @@ const handleComment = (com, ratings) => {
 console.log(reviews)
 
   return (
-    <div className='w-11/12 mx-auto my-8'>
+    <div className=' my-8'>
       <div className='sticky top-0  z-50'> <Navbar></Navbar></div>
       <div className='flex flex-row gap-12 my-12'>
       <div className="card bg-base-100 w-96 shadow-sm flex-1/4">

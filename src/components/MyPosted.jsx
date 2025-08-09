@@ -58,7 +58,7 @@ const handleDelete=(id)=>{
 
 
     return (
-      <div className='lg:w-11/12 mx-auto mt-8'>
+      <div className=' mt-8'>
        
          <div className='sticky top-0  z-50'><Navbar></Navbar></div>
    <p className='text-center text-5xl mt-24 border-b-2 pb-2 mb-4'>Jobs posted by : <span className='text-5xl font-bold text-blue-500'>{user.displayName}</span> </p>
