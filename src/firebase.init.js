@@ -5,13 +5,14 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCWfZuzi5Q7416dAJhBqRZ9pXtgqEIS1w8",
-  authDomain: "hotel-booking-client-b0a32.firebaseapp.com",
-  projectId: "hotel-booking-client-b0a32",
-  storageBucket: "hotel-booking-client-b0a32.firebasestorage.app",
-  messagingSenderId: "733622923400",
-  appId: "1:733622923400:web:c50d5cfc7928e129eeef3d"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId
 };
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

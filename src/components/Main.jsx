@@ -15,7 +15,7 @@ const Main = () => {
         const [revw,setrevw]=useState([])
       
          useEffect(()=>{
-             fetch('https://hotel-booking-server-three-lake.vercel.app/rooms/reviews').then(res=>res.json()).then(data=>{
+             fetch('http://localhost:3000/rooms/reviews').then(res=>res.json()).then(data=>{
             setrevw(data);
          
          
@@ -27,13 +27,13 @@ const Main = () => {
   // const[visit,setVisit]=useState([]);
 
   // useEffect(()=>{
-  //   fetch('https://hotel-booking-server-three-lake.vercel.app/history').then(res=>res.json()).then(data=>{
+  //   fetch('http://localhost:3000/history').then(res=>res.json()).then(data=>{
   //     setVisit(data);
   //   })
   // },[])
   // console.log(visit);
   useEffect(()=>{
-    fetch('https://hotel-booking-server-three-lake.vercel.app/rooms').then(res=>res.json()).then(data=>{
+    fetch('http://localhost:3000/rooms').then(res=>res.json()).then(data=>{
       setrooms(data);
     })
   },[])

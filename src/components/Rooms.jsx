@@ -14,7 +14,7 @@ const Rooms = () => {
       useEffect(() => {
         const fetchRooms = async () => {
             try {
-                const response = await fetch(`https://hotel-booking-server-three-lake.vercel.app/rooms?sort=${sortOrder}`);
+                const response = await fetch(`http://localhost:3000/rooms?sort=${sortOrder}`);
                 const data = await response.json();
                 setRooms(data);
             } catch (error) {

@@ -1,5 +1,5 @@
 export const myBookingsPromise=(email,accessToken)=>{
-    return fetch(`https://hotel-booking-server-three-lake.vercel.app/mybookings?email=${email}`,
+    return fetch(`http://localhost:3000/mybookings?email=${email}`,
         {
             
             headers:{
