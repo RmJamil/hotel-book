@@ -7,7 +7,7 @@ const Featured = ({room}) => {
       <div className=' flex justify-center w-full items-center p-2'>
        <Link to={`/rooms/${room._id}`}>
        
-          <div className="w-full lg:h-[530px] p-4 border-2 border-red-800 rounded-xl shadow-sm ">
+          <div className="w-full lg:h-[530px] p-4 border-2 border-sky-500 rounded-xl shadow-sm ">
               <div className='flex justify-between items-center my-1'>
                 <div className='flex justify-end mt-1 '><button className='border-2 border-sky-400 p-2 cursor-pointer rounded-xl hover:bg-sky-500'>Book now</button></div>
       <h2 className=" mb-2"><span className=' mr-2 italic '>Room No:</span> <span className='font-bold'>{room.room_number}</span></h2>

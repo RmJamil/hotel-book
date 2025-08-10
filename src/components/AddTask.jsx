@@ -20,7 +20,7 @@ const data= Object.fromEntries(formData.entries());
 console.log(data);
 
 // send to db
-fetch("https://hotel-booking-server-three-lake.vercel.app/addtask", {
+fetch("http://localhost:3000/addtask", {
   method: "POST",
   headers: {
     "Content-Type": "application/json",

@@ -32,7 +32,7 @@ const handleDelete=(id)=>{
 }).then((result) => {
   console.log(result.isConfirmed)
   if (result.isConfirmed) {
-    fetch(`https://hotel-booking-server-three-lake.vercel.app/addtask/${id}`,
+    fetch(`http://localhost:3000/addtask/${id}`,
      {
       method:'DELETE'
      } 

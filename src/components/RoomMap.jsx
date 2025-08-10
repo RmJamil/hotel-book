@@ -11,7 +11,7 @@ const RoomMap = ({room}) => {
         <Link to={`/rooms/${room._id}`}>
        <div className=' flex justify-center items-center p-2'>
        
-          <div className="w-full lg:h-[530px] p-4 border-2 border-red-800 rounded-xl shadow-sm ">
+          <div className="w-full lg:h-[530px] p-4 border-2 border-sky-500 rounded-xl shadow-sm ">
       <h2 className=" mb-2"><span className=' mr-2 italic '>Room No:</span> <span className='font-bold'>{room.room_number}</span></h2>
       <img className='lg:h-48 w-full rounded-2xl' src={room.image_url} alt="" />
            <p className="text-xl font-bold">

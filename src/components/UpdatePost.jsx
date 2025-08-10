@@ -23,7 +23,7 @@ const data= Object.fromEntries(formData.entries());
 console.log(data);
 
 // send to db
-fetch(`https://hotel-booking-server-three-lake.vercel.app/updatepost/${jobs._id}`, {
+fetch(`http://localhost:3000/updatepost/${jobs._id}`, {
   method: "PUT",
   headers: {
     "Content-Type": "application/json",

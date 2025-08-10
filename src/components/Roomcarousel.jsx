@@ -18,7 +18,7 @@ function Roomcarousel() {
 
   useEffect(() => {
     // Replace this URL with your real backend endpoint
-    fetch('https://hotel-booking-server-three-lake.vercel.app/rooms')
+    fetch('http://localhost:3000/rooms')
       .then(response => response.json())
       .then(data => {
         setTestimonials(data);

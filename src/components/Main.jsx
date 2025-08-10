@@ -15,7 +15,7 @@ const Main = () => {
         const [revw,setrevw]=useState([])
       
          useEffect(()=>{
-             fetch('https://hotel-booking-server-three-lake.vercel.app/rooms/reviews').then(res=>res.json()).then(data=>{
+             fetch('http://localhost:3000/rooms/reviews').then(res=>res.json()).then(data=>{
             setrevw(data);
          
          
@@ -27,13 +27,13 @@ const Main = () => {
   // const[visit,setVisit]=useState([]);
 
   // useEffect(()=>{
-  //   fetch('https://hotel-booking-server-three-lake.vercel.app/history').then(res=>res.json()).then(data=>{
+  //   fetch('http://localhost:3000/history').then(res=>res.json()).then(data=>{
   //     setVisit(data);
   //   })
   // },[])
   // console.log(visit);
   useEffect(()=>{
-    fetch('https://hotel-booking-server-three-lake.vercel.app/rooms').then(res=>res.json()).then(data=>{
+    fetch('http://localhost:3000/rooms').then(res=>res.json()).then(data=>{
       setrooms(data);
     })
   },[])
@@ -52,10 +52,10 @@ const Main = () => {
             </div>
            <div>
             <p className='text-center text-3xl font-bold text-sky-500 mt-6'>Visit our exclusive hotel</p>
-             <div className='mt-8 p-2 border-2 border-red-800 rounded-2xl'>
+             <div className='mt-8 p-2 border-2 border-sky-500 rounded-2xl'>
             <MapView/>
             <p className='italic lg:text-3xl font-bold mt-4 lg:ml-4 text-sky-500'>Address:</p>
-            <p className='lg:text-5xl font-bold mt-4 lg:ml-24 text-red-700'>Hotel Jeal <span className='text-xl text-green-400' >(5 Star hotel)</span></p>
+            <p className='lg:text-5xl font-bold mt-4 lg:ml-24 text-sky-500'>Hotel Jeal <span className='text-xl text-sky-500' >(5 Star hotel)</span></p>
            
             <p className='lg:text-2xl font-bold  lg:ml-34'>
                    Mongla port beach, <br />

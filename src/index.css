@@ -5,7 +5,7 @@
 
 
 body{
-  background-color: white;
+  @apply bg-sky-100;
   color:black;
   transition:background-color 0.3s, color 0.3s;
   padding: 14px;
@@ -17,7 +17,7 @@ body{
 
 .highlighted a.active{
     
-    border-bottom:3px solid #ca0000;
+   @apply border-b-2 border-sky-600
   
     
 }

@@ -9,7 +9,7 @@ const Carouse = (product) => {
         const ratings=product?.ratings;
    
     return (
-        <div className="card border-2  border-red-700 shadow-sm">
+        <div className="card border-2  border-sky-500 shadow-sm">
            <NavLink to='/'>
   <figure className="lg:px-10 lg:pt-10">
     <img
@@ -29,7 +29,7 @@ const Carouse = (product) => {
                                          <>
                                          <label className=''>
                                              <input type='radio'className='hidden'  name="rate" value={currentRate} /> 
-                                             <IoIosStar className='mr-1' size={16} color={currentRate <=(rateColor || ratings)? "red":"gray"}  />
+                                             <IoIosStar className='mr-1' size={16} color={currentRate <=(rateColor || ratings)? "#0ea5e9":"gray"}  />
                                              
                                          </label>
                                          </>

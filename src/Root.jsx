@@ -46,7 +46,7 @@ const Root = () => {
 
             
 
-            <main>
+            <main className='w-11/12 mx-auto'>
                
                
                 <header>
@@ -58,7 +58,7 @@ const Root = () => {
 </section>
            
 
-            </main>
+          
             <section className='my-3'>    <Roomservices></Roomservices></section>
 
             <section>
@@ -74,7 +74,7 @@ const Root = () => {
              </Outlet>
            </section>
            
-          
+            </main>
            <Footer></Footer>
 
    {/* Open the modal using document.getElementById('ID').showModal() method */}

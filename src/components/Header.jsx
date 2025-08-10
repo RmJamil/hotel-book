@@ -14,7 +14,7 @@ const Header = () => {
 
  
   return (
-    <div className='bg-[url(https://i.postimg.cc/tCCM1S7C/hhh.jpg)] flex flex-col justify-center bg-no-repeat bg-cover bg-center h-[60vh] lg:h-[90vh] border-2 border-red-800 lg:m-8 rounded-2xl'>
+    <div className='bg-[url(https://i.postimg.cc/tCCM1S7C/hhh.jpg)] flex flex-col justify-center bg-no-repeat bg-cover bg-center h-[60vh] lg:h-[90vh] border-2 border-sky-500 lg:m-8 rounded-2xl'>
    <Marquee flex pauseOnHover={true}>
 
   <div className='flex items-center justify-center'>

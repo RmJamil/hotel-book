@@ -13,7 +13,7 @@ const Rooms = () => {
     const fetchRooms = async () => {
       try {
         setLoading(true); 
-        const response = await fetch(`https://hotel-booking-server-three-lake.vercel.app/rooms?sort=${sortOrder}`);
+        const response = await fetch(`http://localhost:3000/rooms?sort=${sortOrder}`);
         const data = await response.json();
         setRooms(data);
       } catch (error) {
@@ -44,7 +44,7 @@ const Rooms = () => {
           name="sorting"
           onChange={handleLow}
           value={sortOrder}
-          className=" p-2 rounded-2xl m-3 cursor-pointer border-2 border-red-700  hover:bg-sky-500"
+          className=" p-2 rounded-2xl m-3 cursor-pointer border-2 border-sky-500  hover:bg-sky-500"
         >
           <option value="" disabled>
             Sort
