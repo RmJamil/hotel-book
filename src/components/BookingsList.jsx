@@ -38,7 +38,7 @@ const [reviews, setReviews] = useState([]);
 
 
    useEffect(()=>{
-         fetch('http://localhost:3000/history').then(res=>res.json()).then(data=>{
+         fetch('https://hotel-booking-server-three-lake.vercel.app/history').then(res=>res.json()).then(data=>{
         setRooms(data);
      
      
@@ -50,7 +50,7 @@ const [reviews, setReviews] = useState([]);
   console.log(rooms);
 const handleFetch=(id,selected)=>{
   console.log({id,selected})
-  fetch('http://localhost:3000/mybooking',{
+  fetch('https://hotel-booking-server-three-lake.vercel.app/mybooking',{
 
   method:'PATCH',
   headers:{
@@ -188,7 +188,7 @@ return;
 }).then((result) => {
   console.log(result.isConfirmed)
   if (result.isConfirmed) {
-    fetch(`http://localhost:3000/room/${id}`,
+    fetch(`https://hotel-booking-server-three-lake.vercel.app/room/${id}`,
      {
       method:'DELETE'
      } 
@@ -251,7 +251,7 @@ document.getElementById('rev').close();
 
 const revFetch=(email,num,reviews)=>{
   console.log({email,num,reviews})
-  fetch('http://localhost:3000/review',{
+  fetch('https://hotel-booking-server-three-lake.vercel.app/review',{
 
   method:'PATCH',
   headers:{
@@ -276,7 +276,7 @@ const revFetch=(email,num,reviews)=>{
 
 
 const postRev=(reviews)=>{
- fetch("http://localhost:3000/rooms/reviews", {
+ fetch("https://hotel-booking-server-three-lake.vercel.app/rooms/reviews", {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
@@ -339,15 +339,15 @@ console.log(revw)
     </Helmet>
          <th>{index+1}</th>
     <td>{room.roomNo}</td>
-     <td><img className='w-34 text-center mx-auto rounded-xl' src={room.image} alt="" />  <button onClick={()=>handleModal(room)} className='btn bg-sky-400 m-2'>Review</button></td>
+     <td><img className='w-34 text-center mx-auto rounded-xl' src={room.image} alt="" />  <button onClick={()=>handleModal(room)} className='border-2 m-1 border-sky-400 p-2 cursor-pointer rounded-xl hover:bg-sky-500'>Review</button></td>
         <td><p>{room.date}</p>
-         <button className="btn m-2 bg-sky-400 border-none" onClick={()=>handleUpdate(room)}>Update date</button>
+         <button className='border-2 m-1 border-sky-400 p-2 cursor-pointer rounded-xl hover:bg-sky-500' onClick={()=>handleUpdate(room)}>Update date</button>
         </td>
       
         <td>$ {room.rent} USD</td>
         
         {/* <td><Link to={`/update/${room._id}`}><button onClick={()=>handleUpdate(room._id)} className='btn bg-lime-500'>Cancel</button></Link></td> */}
-        <td><button onClick={()=>handleDelete(room)} className='btn bg-sky-400'>Cancel</button></td>
+        <td><button onClick={()=>handleDelete(room)} className='border-2 m-1 border-sky-400 p-2 cursor-pointer rounded-xl hover:bg-sky-500'>Cancel</button></td>
         {/* <td><Link to={`/addtask/${room._id}`}><button className='btn bg-lime-500'>review</button></Link></td> */}
     </tr>)
 }
@@ -423,7 +423,7 @@ console.log(revw)
                 </div>
                 <div className='flex flex-col items-center justify-center text-center '>
              <input className='mx-auto my-3 text-center' name="somoy" type="text" value={dateTime()} readOnly/>
-            <button type="submit" className='btn border-none bg-green-400 rounded-lg text-white'>Submit Review</button>
+            <button type="submit" className='border-2 m-1 border-sky-400 p-2 cursor-pointer rounded-xl hover:bg-sky-500'>Submit Review</button>
                 </div>
              
           </form>

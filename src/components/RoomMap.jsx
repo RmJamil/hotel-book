@@ -7,7 +7,7 @@ const RoomMap = ({room}) => {
    
     console.log(room);
     return (
-       <div className='w-11/12 mx-auto mt-8'>
+       <div className='lg:w-11/12 mx-auto mt-8'>
         <Link to={`/rooms/${room._id}`}>
        <div className=' flex justify-center items-center p-2'>
        
@@ -31,7 +31,7 @@ const RoomMap = ({room}) => {
       <div>
         {
           room.facilities.map((facility,ind)=>(
-              <button key={ind} className='btn border-none bg-blue-500 m-1'>{facility}</button>
+              <button key={ind} className='border-2 m-1 border-sky-400 p-2 cursor-pointer rounded-xl hover:bg-sky-500'>{facility}</button>
           ))
         }
       </div>

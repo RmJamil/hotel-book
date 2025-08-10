@@ -1,5 +1,3 @@
-import React, { use } from 'react';
-
 const Service = ({one}) => {
     console.log(one);
    
@@ -7,7 +5,7 @@ const Service = ({one}) => {
         <div>
             <div>
                 
-                <div className=" bg-sky-100 lg:h-[650px] lg:m-4 lg:p-5 rounded-2xl">
+                <div className=" bg-sky-100 lg:h-[650px] lg:m-4 lg:p-5 p-3 rounded-2xl">
                      <h1 className="text-2xl text-center text-sky-400 font-bold lg:my-6">{one.service}</h1>
   <div className=" flex-col lg:flex-row-reverse">
     <img

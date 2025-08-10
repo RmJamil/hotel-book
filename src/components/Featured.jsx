@@ -9,7 +9,7 @@ const Featured = ({room}) => {
        
           <div className="w-full lg:h-[530px] p-4 border-2 border-red-800 rounded-xl shadow-sm ">
               <div className='flex justify-between items-center my-1'>
-                <div className='flex justify-end mt-1 '><button className='btn bg-sky-500 hover:bg-sky-600'>Book now</button></div>
+                <div className='flex justify-end mt-1 '><button className='border-2 border-sky-400 p-2 cursor-pointer rounded-xl hover:bg-sky-500'>Book now</button></div>
       <h2 className=" mb-2"><span className=' mr-2 italic '>Room No:</span> <span className='font-bold'>{room.room_number}</span></h2>
               </div>
       <img className='lg:h-48 lg:w-[500px] rounded-2xl' src={room.image_url} alt="" />
@@ -30,7 +30,7 @@ const Featured = ({room}) => {
       <div>
         {
           room.facilities.map((facility,ind)=>(
-              <button key={ind} className='btn border-none bg-sky-300 m-1'>{facility}</button>
+              <button key={ind} className='border-2 m-1 border-sky-400 p-2 cursor-pointer rounded-xl hover:bg-sky-500'>{facility}</button>
           ))
         }
       </div>

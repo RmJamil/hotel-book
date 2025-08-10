@@ -9,15 +9,15 @@ const Carouse = (product) => {
         const ratings=product?.ratings;
    
     return (
-        <div className="card border-2 border-red-700 shadow-sm">
+        <div className="card border-2  border-red-700 shadow-sm">
            <NavLink to='/'>
-  <figure className="lg:px-10 px-3 pt-10">
+  <figure className="lg:px-10 lg:pt-10">
     <img
       src={product.houseImg}
       alt=""
       className="rounded-xl  lg:h-[240px]  "  />
   </figure>
-  <div className="hidden lg:block card-body items-center text-center">
+  <div className="card-body items-center text-center">
     <h2 className="card-title">{product?.name}</h2>
     <p>{product?.comment} </p>
 
@@ -38,7 +38,7 @@ const Carouse = (product) => {
                    }
    </div>
     <div className="avatar mt-4">
-  <div className="w-28 h-28 rounded-full ">
+  <div className="lg:w-28 lg:h-28 rounded-full ">
     <img src={product?.photo}/>
   </div>
 
