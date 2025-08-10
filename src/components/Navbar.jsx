@@ -1,11 +1,11 @@
-import React, { use, useEffect, useState } from 'react';
-import log3 from '../assets/log3.png';
+import React, { use, useState } from 'react';
+
 
 import '../../src/index.css';
 import { AuthContext } from './AuthProvider';
 import Swal from 'sweetalert2';
 import { MdDarkMode, MdOutlineDarkMode } from 'react-icons/md';
-import { addCart, getCart } from './Local';
+
 import { NavLink } from 'react-router';
 
 const Navbar = () => {
@@ -34,13 +34,14 @@ const Navbar = () => {
     <>
       <li><NavLink to="/">Home</NavLink></li>
       <li><NavLink to="/rooms">Rooms</NavLink></li>
-      <li><NavLink to='/mybookings'>My Bookings</NavLink></li>
+      <li><NavLink to="/discount">Discount Rooms</NavLink></li>
+      
       
     </>
   );
 
   return (
-    <div className="navbar bg-sky-300 lg:px-16 lg:py-4 w-full shadow-sm rounded-md lg:rounded-xl">
+    <div className="navbar bg-sky-300 lg:px-20 lg:py-4 w-full shadow-sm rounded-md lg:rounded-xl">
       <div className="flex-1 flex items-center justify-between w-full">
         {/* Logo and Mobile Toggle */}
         <div className="flex flex-col-reverse top-0 lg:flex-row items-center">
@@ -67,6 +68,7 @@ const Navbar = () => {
          <div className='flex flex-col'>
            <ul className=" menu menu-vertical gap-2 shadow rounded p-4 mt-4 highlighted">
             {links}
+          
             {user ? (
               <li><button onClick={handleLogOut}>Log out</button></li>
             ) : (
@@ -88,6 +90,13 @@ const Navbar = () => {
          
           <ul className="menu menu-horizontal gap-4 highlighted">
             {links}
+            {
+              user?(<>
+              <li><NavLink to='/mybookings'>My Bookings</NavLink></li>
+                     <li><NavLink to='/profile'>Profile</NavLink></li>
+              </>
+              ):("")
+            }
           </ul>
         </div>
 

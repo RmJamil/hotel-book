@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { useLoaderData } from 'react-router';
 import RoomMap from './RoomMap';
 import Navbar from './Navbar';
 import { Helmet } from 'react-helmet';

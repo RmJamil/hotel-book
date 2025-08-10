@@ -20,6 +20,8 @@ import Rooms from "./components/Rooms"
 import RoomDetails from "./components/RoomDetails"
 import MyBookings from "./components/MyBookings"
 import RoomConfirm from "./components/RoomConfirm"
+import Profile from "./components/Profile"
+import DiscountRooms from "./components/DiscountRooms"
 
 
 const router=createBrowserRouter([
@@ -74,6 +76,10 @@ const router=createBrowserRouter([
             element:(<PrivateRoute><MyPosted></MyPosted></PrivateRoute>),
            
          },
+         {
+            path:'/profile',
+            element:(<PrivateRoute><Profile></Profile></PrivateRoute>),
+         },
    
    
     {  
@@ -89,6 +95,10 @@ const router=createBrowserRouter([
   
         Component:Login,
        
+     },
+     {
+      path:'/discount',
+      element:<DiscountRooms></DiscountRooms>
      },
   
 

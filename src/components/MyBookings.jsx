@@ -1,5 +1,4 @@
 import React, { Suspense, use } from 'react'
-import { useLoaderData } from 'react-router';
 import { AuthContext } from './AuthProvider';
 import BookingsList from './BookingsList';
 import {myBookingsPromise} from './bookingsApi'
@@ -22,9 +21,11 @@ const MyBookings=()=>{
           </Helmet>
       <Navbar></Navbar>
 
-        <Suspense fallback={'loading.........'}>
+        <div className='w-11/12 mx-auto'>
+          <Suspense fallback={'loading.........'}>
                <BookingsList myBookingsPromise={myBookingsPromise(user.email,user.accessToken)} ></BookingsList>
         </Suspense>
+        </div>
           <Footer></Footer>
         </div>
     )

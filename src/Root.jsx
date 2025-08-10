@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect} from 'react';
 import Navbar from './components/Navbar';
 import { Outlet } from 'react-router';
 import Header from './components/Header';
@@ -7,7 +7,7 @@ import LeftAside from './components/LeftAside';
 
 import Footer from './components/Footer';
 
-import { useLoaderData } from 'react-router';
+
 import Roomcarousel from './components/Roomcarousel';
 import Carouse from './components/Carouse';
 import Main from './components/Main';
@@ -32,7 +32,7 @@ const Root = () => {
    
  
     return (
-        <div>
+        <div className='w-full'>
 
           <Helmet>
             <title>Hotel Jeal | home</title>
