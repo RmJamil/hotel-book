@@ -40,7 +40,7 @@ const router=createBrowserRouter([
     
      {
             path:"/rooms",
-            loader:()=>fetch('http://localhost:3000/rooms'),
+            loader:()=>fetch('https://hotel-booking-server-three-lake.vercel.app/rooms'),
             Component:Rooms
            
            
@@ -53,26 +53,26 @@ const router=createBrowserRouter([
          },
      {
             path:"/confirm",
-            // loader:()=>fetch('http://localhost:3000/rooms'),
+            // loader:()=>fetch('https://hotel-booking-server-three-lake.vercel.app/rooms'),
            element:(<RoomConfirm></RoomConfirm>)
            
            
          },
      {
             path:'/rooms/:id',
-            loader:({params})=>fetch(`http://localhost:3000/rooms/${params.id}`),
+            loader:({params})=>fetch(`https://hotel-booking-server-three-lake.vercel.app/rooms/${params.id}`),
             element:(<RoomDetails></RoomDetails>),
            
          },
      {
             path:'/updatepost/:id',
-            loader:({params})=>fetch(`http://localhost:3000/addtask/${params.id}`),
+            loader:({params})=>fetch(`https://hotel-booking-server-three-lake.vercel.app/addtask/${params.id}`),
             element:(<PrivateRoute><UpdatePost></UpdatePost></PrivateRoute>),
            
          },
      {
             path:'/mypost',
-             loader:()=>fetch('http://localhost:3000/addtask'),
+             loader:()=>fetch('https://hotel-booking-server-three-lake.vercel.app/addtask'),
             element:(<PrivateRoute><MyPosted></MyPosted></PrivateRoute>),
            
          },

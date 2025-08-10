@@ -38,7 +38,7 @@ const [reviews, setReviews] = useState([]);
 
 
    useEffect(()=>{
-         fetch('http://localhost:3000/history').then(res=>res.json()).then(data=>{
+         fetch('https://hotel-booking-server-three-lake.vercel.app/history').then(res=>res.json()).then(data=>{
         setRooms(data);
      
      
@@ -50,7 +50,7 @@ const [reviews, setReviews] = useState([]);
   console.log(rooms);
 const handleFetch=(id,selected)=>{
   console.log({id,selected})
-  fetch('http://localhost:3000/mybooking',{
+  fetch('https://hotel-booking-server-three-lake.vercel.app/mybooking',{
 
   method:'PATCH',
   headers:{
@@ -188,7 +188,7 @@ return;
 }).then((result) => {
   console.log(result.isConfirmed)
   if (result.isConfirmed) {
-    fetch(`http://localhost:3000/room/${id}`,
+    fetch(`https://hotel-booking-server-three-lake.vercel.app/room/${id}`,
      {
       method:'DELETE'
      } 
@@ -251,7 +251,7 @@ document.getElementById('rev').close();
 
 const revFetch=(email,num,reviews)=>{
   console.log({email,num,reviews})
-  fetch('http://localhost:3000/review',{
+  fetch('https://hotel-booking-server-three-lake.vercel.app/review',{
 
   method:'PATCH',
   headers:{
@@ -276,7 +276,7 @@ const revFetch=(email,num,reviews)=>{
 
 
 const postRev=(reviews)=>{
- fetch("http://localhost:3000/rooms/reviews", {
+ fetch("https://hotel-booking-server-three-lake.vercel.app/rooms/reviews", {
   method: "POST",
   headers: {
     "Content-Type": "application/json",

@@ -12,7 +12,7 @@ const DiscountRooms = () => {
     const fetchRooms = async () => {
       try {
         setLoading(true); // start loading
-        const response = await fetch(`http://localhost:3000/discount`);
+        const response = await fetch(`https://hotel-booking-server-three-lake.vercel.app/discount`);
         const data = await response.json();
         setRooms(data);
       } catch (error) {

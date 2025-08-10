@@ -6,7 +6,7 @@ const Roomservices = () => {
 const [serv,setServ]=useState([]);
 
  useEffect(()=>{
-       fetch('http://localhost:3000/service').then(res=>res.json()).then(data=>{
+       fetch('https://hotel-booking-server-three-lake.vercel.app/service').then(res=>res.json()).then(data=>{
       setServ(data);
    
    
