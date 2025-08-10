@@ -7,19 +7,19 @@ import Footer from './Footer';
 const Rooms = () => {
   const [rooms, setRooms] = useState([]);
   const [sortOrder, setSortOrder] = useState('');
-  const [loading, setLoading] = useState(true); // loading state
+  const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
     const fetchRooms = async () => {
       try {
-        setLoading(true); // start loading
+        setLoading(true); 
         const response = await fetch(`https://hotel-booking-server-three-lake.vercel.app/rooms?sort=${sortOrder}`);
         const data = await response.json();
         setRooms(data);
       } catch (error) {
         console.error('Error fetching rooms:', error);
       } finally {
-        setLoading(false); // stop loading
+        setLoading(false); 
       }
     };
 
